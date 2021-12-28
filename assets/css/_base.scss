@@ -1,0 +1,28 @@
+
+/* Variaveis de cor */
+$white_primary: #FFFFFF;
+$white_secondary: #F2F2F2;
+$black_primary: #0D0D0D;
+$black_secondary: #1A1A1A;
+$grey_primary: #C9C9C9;
+$grey_secondary: #54565B;
+$yellow_primary: #F2CB07;
+$yellow_secondary: #FAD41B;
+
+$range_shadow: 0px 0px 0px #000000, 0px 5px 18px rgba(#0d0d0d, 0.3);
+$thumb-border: 0px solid #000000;
+$track-border: 0px solid #000101;
+
+/* Fontes do e-commerce */
+$font-primary: 'Mukta', sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 100% $font-primary;
+    color: $black-primary;
+}
+
+    
