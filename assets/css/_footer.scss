@@ -1,0 +1,9 @@
+#footer {
+    background-color: $white-primary;
+}
+
+.nav {
+    .nav-item {
+        @include link-title($purple_primary);
+    }
+}

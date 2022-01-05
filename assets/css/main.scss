@@ -1,4 +1,5 @@
 /* Componentes base Scss - estilo próprio */
+@import './scss/bootstrap';
 @import './variables';
 @import './_base';
 @import './extends';
@@ -10,3 +11,4 @@
 
 /* Estilos da página */
 @import './nav';
+@import './footer'

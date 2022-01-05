@@ -1,4 +1,4 @@
-@import './scss/bootstrap';
+
 
 * {
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
     font: 100% $font-primary;
     color: $black-primary;
-    background-color: #0D0D0D;
+    background-color: $grey-primary;
     border: 0px;
 }
 

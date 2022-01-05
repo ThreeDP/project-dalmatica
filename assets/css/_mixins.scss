@@ -1,0 +1,11 @@
+@mixin link-title($color) {
+    &:nth-child(1) a{
+        color: $color;
+        font-weight: 800;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $color;
+        }
+    }
+}

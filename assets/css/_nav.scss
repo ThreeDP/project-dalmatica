@@ -99,15 +99,7 @@
         border-right: 1px solid $grey-primary;
 
         li {
-            &:nth-child(1) .dropdown-item{
-                color: $purple_primary;
-                font-weight: 800;
-
-                &:hover {
-                    text-decoration-color: $purple_primary;
-                }
-                
-            }
+            @include link-title($purple_primary);
         }
 
         .dropdown-item {
