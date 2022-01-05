@@ -1,5 +1,12 @@
+/* Componentes base Scss - estilo próprio */
 @import './variables';
+@import './_base';
 @import './extends';
 @import './mixins';
-@import './_base';
+
+/* Componentes Scss boostrap */
+@import './scss/mixins/transition';
+@import './scss/transitions';
+
+/* Estilos da página */
 @import './nav';
