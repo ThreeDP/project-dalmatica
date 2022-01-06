@@ -11291,4 +11291,98 @@ body {
   height: auto;
 }
 
+.products-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 4px 4px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.products-card a {
+  text-decoration: none;
+}
+.products-card .product-card {
+  background-color: #FFFFFF;
+  border-radius: 1px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.products-card .product-card:hover {
+  border: 1px solid #4C25D9;
+}
+.products-card .product-card:hover .product-view .product-price {
+  width: 120px;
+}
+.products-card .product-card:hover .product-view .product-price .price-label {
+  color: #FFFFFF;
+  background-color: #4C25D9;
+}
+.products-card .product-card .product-view .product-price {
+  position: relative;
+  bottom: 35px;
+  height: 0px;
+  width: 100px;
+  right: 0px;
+  float: right;
+}
+.products-card .product-card .product-view .product-price .price-label {
+  padding-left: 5px;
+  color: #4C25D9;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.products-card .product-card img {
+  display: block;
+  width: 100%;
+}
+.products-card .product-card:hover .product-label {
+  color: #4C25D9;
+}
+.products-card .product-card .product-label {
+  color: #0D0D0D;
+  padding: 8px;
+  text-decoration: none;
+}
+.products-card .product-card .product-label .product-name {
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  line-height: 18px;
+}
+.products-card .product-card .product-label .product-category {
+  font-size: 16px;
+  color: #54565B;
+}
+
+@media (max-width: 1000px) {
+  .products-card {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 4px 4px;
+    padding: 0px;
+  }
+}
+@media (max-width: 760px) {
+  .products-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 4px 4px;
+    padding: 0px;
+  }
+}
+@media (max-width: 480px) {
+  .products-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 4px 4px;
+    padding: 0px;
+  }
+}
+.title-section {
+  margin-top: 3rem;
+  margin-left: 2rem;
+  color: #0D0D0D;
+  font-family: "Montserrat", sans-serif;
+}
+
 /*# sourceMappingURL=main.css.map */
