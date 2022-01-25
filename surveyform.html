@@ -16,19 +16,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
     <!-- Arquivos CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/form.css">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            $("#header").load("assets/pages/nav-bar.html");
-            $("#footer").load("assets/pages/footer.html");
-        })
-    </script>
-
-
 
     <!-- Fontes do site -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,71 +32,108 @@
         
 </head>
 <body>
-    <section>
-        <section id="header"></section>
-        <h1 id="title">Solta a Voz</h1>
-        <p id="description">Explique melhor como podemos melhorar sua experiência com nossa marca.</p>
-        <form action="" id="survey-form">
-            <label id="name-label" for="#name">Seu nome</label>
-            <input type="text" id="name" placeholder="Nome Completo" required>
+    <section class=container>
 
-            <label id="email-number" for="#email">Email</label>
-            <input type="email" id="email" placeholder="Seu endereço de email" required>
-
-            <label id="number-label" for="#number">Sua Idade</label>
-            <input type="number" id="number" min="12" max="70" required>
-
-            <label for="#dropdown">Como conheceu nossa marca?</label>
-            <select name="dropdown" id="dropdown" required>
-                <option selected disabled>Selecione das opções</option>
-                <option value="instagram">instagram</option>
-                <option value="facebook">facebook</option>
-                <option value="google">google</option>
-                <option value="indicação de um amigo">indicação de um amigo</option>
-                <option value="outros">outros</option>
-            </select>
-
-            <label for="recommendRadio">Você recomendaria nosso marca para um amigo?</label>
-            <div id="recommendRadio">
-                <input name="recommend" type="radio" id="recommendChoice01" value="Com certeza">
-                <label for="recommendChoice01">Com certeza</label>
-                <input name="recommend" type="radio" id="recommendChoice02" value="Talvez">
-                <label for="recommendChoice02">Talvez</label>
-                <input name="recommend" type="radio" id="recommendChoice03" value="Não estou certo">
-                <label for="recommendChoice03">Não estou certo</label>
+        <form class="form" action="" id="survey-form">
+            <div class="title-area">
+                <h1 class="title-primary" id="title">Solta a Voz</h1>
+                <p class="title-description" id="description">Explique melhor como podemos melhorar sua experiência com nossa marca.</p>
             </div>
 
-            <label for="#liked-most">Quais tipos de produtos você mais gostou?</label>
-            <div id="liked-most">
-                <label>
-                    <input type="checkbox" value="camisetas">camisetas
-                </label>
-                <label>
-                    <input type="checkbox" value="moletons">moletons
-                </label>
-                <label>
-                    <input type="checkbox" value="casacos">casacos
-                </label>
-                <label>
-                    <input type="checkbox" value="calças">calças
-                </label>
-                <label>
-                    <input type="checkbox" value="bermudas">bermudas
-                </label>
-                <label>
-                    <input type="checkbox" value="acessórios">acessórios
-                </label>
+            <div class="input-group">
+                <label class="input-label" id="name-label" for="#name">Seu nome</label>
+                <input class="input" type="text" id="name" placeholder="Nome Completo" required>
             </div>
 
-            <label for="comments">Deixei um breve comentário sobre nossos produtos, melhorias ou feedbacks positivos ou negativos!</label>
-            <textarea name="MoreComments" id="Comments" cols="30" rows="6" placeholder="Explique mais sobre os itens acima..." spellcheck="false" data-gramm="false">
-            </textarea>
+            <div class="input-group">
+                <label class="input-label" id="email-number" for="#email">Email</label>
+                <input class="input" type="email" id="email" placeholder="Seu endereço de email" required>
+            </div>
 
-            <button type="submit" id="submit">Enviar</button>
+            <div class="input-group">
+                <label class="input-label" id="number-label" for="#number">Sua Idade</label>
+                <input class="input" type="number" id="number" min="12" max="70" required>
+            </div>
+
+            <div class="select-group">
+                <label for="#dropdown" class="input-label">Como conheceu nossa marca?</label>
+                <select name="dropdown" id="dropdown" required>
+                    <option selected disabled>Selecione das opções</option>
+                    <option value="instagram">instagram</option>
+                    <option value="facebook">facebook</option>
+                    <option value="google">google</option>
+                    <option value="indicação de um amigo">indicação de um amigo</option>
+                    <option value="outros">outros</option>
+                </select>
+            </div>
+
+            <div class="select-group">
+                <label for="recommendRadio" class="input-label">Você recomendaria nosso marca para um amigo?</label>
+                <div class="input-options" id="recommendRadio">
+                    <label>
+                        <input class="input" name="recommend" type="radio" id="recommendChoice01" value="Com certeza">
+                        Com certeza
+                    </label>
+                    <label>
+                        <input class="input" name="recommend" type="radio" id="recommendChoice02" value="Talvez">
+                        Talvez
+                    </label>
+                    <label>
+                        <input class="input" name="recommend" type="radio" id="recommendChoice03" value="Não estou certo">
+                        Não estou certo
+                    </label>
+                </div>
+            </div>
+
+            <div class="select-group">
+                <label for="#liked-most" class="input-label">Quais tipos de produtos você mais gostou?</label>
+                <div id="liked-most" class="input-options">
+                    <label>
+                        <input class="input" type="checkbox" value="camisetas"> camisetas
+                    </label>
+                    <label>
+                        <input class="input" type="checkbox" value="moletons"> moletons
+                    </label>
+                    <label>
+                        <input class="input" type="checkbox" value="casacos"> casacos
+                    </label>
+                    <label>
+                        <input class="input" type="checkbox" value="calças"> calças
+                    </label>
+                    <label>
+                        <input class="input" type="checkbox" value="bermudas"> bermudas
+                    </label>
+                    <label>
+                        <input class="input" type="checkbox" value="acessórios"> acessórios
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group input-area">
+                <label class="input-label" for="comments">Descreva sua experiência:</label>
+                <textarea class="input" name="MoreComments" id="Comments" cols="30" rows="6" placeholder="Explique mais sobre os itens acima..." spellcheck="false" data-gramm="false">
+                </textarea>
+                <small>Deixei um breve comentário sobre nossos produtos, melhorias ou feedbacks positivos ou negativos!</small>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary" type="submit" id="submit">Enviar</button>
+            </div>
+
+            <div class="business-infos">
+                <ul class="social-infos">
+                    <li><a href="" class="bi bi-instagram"> Instagram</a></li>
+                    <li><a href="" class="bi bi-tiktok"> Tiktok</a></li>
+                    <li><a href="" class="bi bi-youtube"> Youtube</a></li>
+                </ul>
+                
+                <div  class="copyright">
+                    <small>©Damática.inc 2022.</small>
+                </div>
+                
+            </div>
         </form>
     </section>
-
-    <section id="footer" ></section>
     
 </body>
 </html>

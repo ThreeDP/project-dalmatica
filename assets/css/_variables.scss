@@ -8,7 +8,26 @@ $grey_secondary:                #54565B;
 $yellow_primary:                #F2CB07;
 $yellow_secondary:              #FAD41B;
 $purple_primary:                #4C25D9;
+$purple_secondary:              #781DF0;
 
 /* Fontes do e-commerce */
 $font-primary:                  'Mukta', sans-serif;
 $font-title:                    'Montserrat', sans-serif;
+
+/* Shadows */
+$btn-shadow:                    0.1px 1.2px 2.2px rgba(0, 0, 0, 0.021),
+                                0.2px 3px 5.3px rgba(0, 0, 0, 0.034),
+                                0.4px 5.6px 10px rgba(0, 0, 0, 0.046),
+                                0.7px 10.1px 17.9px rgba(0, 0, 0, 0.059),
+                                1.3px 18.8px 33.4px rgba(0, 0, 0, 0.076),
+                                3px 45px 80px rgba(0, 0, 0, 0.11)
+                                ;
+$btn-shadow-hover:              0px 0.9px 4px rgba(0, 0, 0, 0.037),
+                                0px 2.2px 9.4px rgba(0, 0, 0, 0.046),
+                                0px 3.9px 16.8px rgba(0, 0, 0, 0.05),
+                                0px 6.4px 27.9px rgba(0, 0, 0, 0.052),
+                                0px 10.6px 46px rgba(0, 0, 0, 0.055),
+                                0px 18.5px 80.4px rgba(0, 0, 0, 0.063),
+                                0px 40px 174px rgba(0, 0, 0, 0.11)
+                                ;
+
