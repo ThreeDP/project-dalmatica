@@ -16,16 +16,18 @@
             border-bottom: 4px solid $color;
             outline: 0;
             box-shadow: 0 -20 0 0 $color;
+            transition: ease-in-out;
+            transition-duration: 120ms;
         }
     }
 
-    &.input-area {
-        .input {
-            &:focus {
-                border: 2px solid $color;
-                outline: 0;
-                box-shadow: 0 0 0 0.20rem rgba($color, 0.4);
-            }
+    .input-area {
+        &:focus {
+            border: 2px solid $color;
+            outline: 0;
+            box-shadow: 0 0 0 0.20rem rgba($color, 0.4);
+            transition: ease-in-out;
+            transition-duration: 120ms;
         }
     }
 
@@ -36,5 +38,22 @@
         .container {
             max-width: $width-container;
         }
+    }
+}
+
+@mixin form-input-pattern () {
+    .input, .input-area {
+        border: none;
+        background-color: inherit;
+        padding: 5px 1.4rem;
+    }
+}
+
+@mixin form-label-pattern() {
+    .input-label {
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 0.5rem;
+        color: $black_secondary;
     }
 }

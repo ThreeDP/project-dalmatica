@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variaveis de cor */
 /* Fontes do e-commerce */
 /* Shadows */
@@ -42,7 +43,7 @@ body {
   max-width: 550px;
   margin: 1.5rem auto;
   border-radius: 10px 10px 30px 30px;
-  background-color: #F2F2F2;
+  background-color: inherit;
   box-shadow: 0.1px 1.2px 2.2px rgba(0, 0, 0, 0.021), 0.2px 3px 5.3px rgba(0, 0, 0, 0.034), 0.4px 5.6px 10px rgba(0, 0, 0, 0.046), 0.7px 10.1px 17.9px rgba(0, 0, 0, 0.059), 1.3px 18.8px 33.4px rgba(0, 0, 0, 0.076), 3px 45px 80px rgba(0, 0, 0, 0.11);
 }
 
@@ -95,11 +96,15 @@ body {
   border-bottom: 4px solid #4C25D9;
   outline: 0;
   box-shadow: 0 -20 0 0 #4C25D9;
+  transition: ease-in-out;
+  transition-duration: 120ms;
 }
-.btn.input-area .input:focus {
+.btn .input-area:focus {
   border: 2px solid #4C25D9;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(76, 37, 217, 0.4);
+  transition: ease-in-out;
+  transition-duration: 120ms;
 }
 .btn.btn-primary {
   background-color: #0D0D0D;
@@ -113,82 +118,90 @@ body {
   box-shadow: 0px 0.9px 4px rgba(0, 0, 0, 0.037), 0px 2.2px 9.4px rgba(0, 0, 0, 0.046), 0px 3.9px 16.8px rgba(0, 0, 0, 0.05), 0px 6.4px 27.9px rgba(0, 0, 0, 0.052), 0px 10.6px 46px rgba(0, 0, 0, 0.055), 0px 18.5px 80.4px rgba(0, 0, 0, 0.063), 0px 40px 174px rgba(0, 0, 0, 0.11);
 }
 
+/* Determina o padrão de label dos campos do formulário. */
+.input-label {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  color: #1A1A1A;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
   margin-top: 1.4rem;
   padding: 0px 1.5rem;
 }
-.input-group.input-area .input-label {
-  font-size: 20px;
-}
-.input-group.input-area .input {
-  border: 2px solid #C9C9C9;
-  background-color: #FFFFFF;
-  border-radius: 5px;
+.input-group .input, .input-group .input-area {
+  border: none;
+  background-color: inherit;
   padding: 5px 1.4rem;
 }
-.input-group .input:focus {
-  border-bottom: 4px solid #4C25D9;
-  outline: 0;
-  box-shadow: 0 -20 0 0 #4C25D9;
+.input-group .input-area {
+  border: 2px solid #C9C9C9;
+  border-radius: 5px;
 }
-.input-group.input-area .input:focus {
-  border: 2px solid #4C25D9;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(76, 37, 217, 0.4);
-}
-.input-group .input-label {
-  font-size: 20px;
+.input-group small {
+  margin-top: 0.5rem;
 }
 .input-group .input {
-  border: none;
   border-bottom: 2px solid #C9C9C9;
-  background-color: #FFFFFF;
   border-radius: 0;
-  padding: 5px 1.4rem;
 }
 .input-group .input:focus {
   border-bottom: 4px solid #4C25D9;
   outline: 0;
   box-shadow: 0 -20 0 0 #4C25D9;
+  transition: ease-in-out;
+  transition-duration: 120ms;
 }
-.input-group.input-area .input:focus {
+.input-group .input-area:focus {
   border: 2px solid #4C25D9;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(76, 37, 217, 0.4);
+  transition: ease-in-out;
+  transition-duration: 120ms;
 }
 
 .select-group {
   padding: 0px 1.5rem;
 }
-.select-group .input-label {
-  font-size: 20px;
-}
 .select-group .input-options {
   display: flex;
   flex-direction: column;
+  justify-items: left;
   cursor: pointer;
 }
 .select-group .input-options label {
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 5px;
 }
 .select-group .input-options label:hover::before {
-  content: ".";
-}
-.select-group .input-options label:focus::before {
-  content: ".";
-  background-color: red;
+  background-color: #4C25D9;
+  border-color: #4C25D9;
+  background-position-x: right;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+  transition: ease-in-out;
+  transition-duration: 200ms;
 }
 .select-group .input-options label::before {
   display: inline-block;
   width: 30px;
   height: 15px;
   border-radius: 40px;
+  content: "";
+  background-repeat: no-repeat;
+  background-color: #C9C9C9;
   border: 2px solid #C9C9C9;
-  content: ">";
+  background-position-x: left;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+.select-group .input-options label::before .input:checked {
+  background-color: red;
+  border-color: red;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
 }
 .select-group .input-options label .input[type=checkbox], .select-group .input-options label .input[type=radio] {
   opacity: 0;
