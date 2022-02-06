@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalmática: fale Conosco</title>
+    <title>Solta a Voz: fale Conosco</title>
     <meta name="description" content="Descreva como foi sua experiência com a Dalmática.">
 
     <!-- Favicon -->
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/form.css">
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/surveysend.js"></script>
 
     <!-- Fontes do site -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,30 +35,31 @@
 <body>
     <section class=container>
 
-        <form class="form" action="" id="survey-form">
+        <form class="form"  method="POST" id="survey-form">
             <div class="title-area">
                 <h1 class="title-primary" id="title">Solta a Voz</h1>
                 <p class="title-description" id="description">Explique melhor como podemos melhorar sua experiência com nossa marca.</p>
             </div>
+            <hr class="divisor">
 
             <div class="input-group">
                 <label class="input-label" id="name-label" for="#name">Seu nome</label>
-                <input class="input" type="text" id="name" placeholder="Nome Completo" required>
+                <input name="Name" class="input" type="text" id="name" placeholder="Nome Completo" required>
             </div>
 
             <div class="input-group">
                 <label class="input-label" id="email-number" for="#email">Email</label>
-                <input class="input" type="email" id="email" placeholder="Seu endereço de email" required>
+                <input name="Email" class="input" type="email" id="email" placeholder="Seu endereço de email" required>
             </div>
 
             <div class="input-group">
                 <label class="input-label" id="number-label" for="#number">Sua Idade</label>
-                <input class="input" type="number" id="number" min="12" max="70" required>
+                <input name="Age" class="input" type="number" id="number" min="12" max="70" required>
             </div>
 
             <div class="select-group">
                 <label for="#dropdown" class="input-label">Como conheceu nossa marca?</label>
-                <select name="dropdown" id="dropdown" required>
+                <select class="select-options" name="HowToBe" id="dropdown" required>
                     <option selected disabled>Selecione das opções</option>
                     <option value="instagram">instagram</option>
                     <option value="facebook">facebook</option>
@@ -80,7 +82,7 @@
                     </label>
                     <label>
                         <input class="input" name="recommend" type="radio" id="recommendChoice03" value="Não estou certo">
-                        Não estou certo
+                        <span>Não estou certo</span>
                     </label>
                 </div>
             </div>
@@ -89,22 +91,22 @@
                 <label for="#liked-most" class="input-label">Quais tipos de produtos você mais gostou?</label>
                 <div id="liked-most" class="input-options">
                     <label>
-                        <input class="input" type="checkbox" value="camisetas"> camisetas
+                        <input name="DidYouLike" class="input" type="checkbox" value="camisetas"> Camisetas
                     </label>
                     <label>
-                        <input class="input" type="checkbox" value="moletons"> moletons
+                        <input name="DidYouLike" class="input" type="checkbox" value="moletons"> Moletons
                     </label>
                     <label>
-                        <input class="input" type="checkbox" value="casacos"> casacos
+                        <input name="DidYouLike" class="input" type="checkbox" value="casacos"> Casacos
                     </label>
                     <label>
-                        <input class="input" type="checkbox" value="calças"> calças
+                        <input name="DidYouLike" class="input" type="checkbox" value="calças">Calças
                     </label>
                     <label>
-                        <input class="input" type="checkbox" value="bermudas"> bermudas
+                        <input name="DidYouLike" class="input" type="checkbox" value="bermudas"> Bermudas
                     </label>
                     <label>
-                        <input class="input" type="checkbox" value="acessórios"> acessórios
+                        <input name="DidYouLike" class="input" type="checkbox" value="acessórios"> Acessórios
                     </label>
                 </div>
             </div>
@@ -117,7 +119,7 @@
             </div>
 
             <div class="btn-group">
-                <button class="btn btn-primary" type="submit" id="submit">Enviar</button>
+                <button class="btn btn-primary">Enviar</button>
             </div>
 
             <div class="business-infos">
@@ -128,12 +130,27 @@
                 </ul>
                 
                 <div  class="copyright">
-                    <small>©Damática.inc 2022.</small>
+                    <small>©Solta a Voz.inc 2022.</small>
                 </div>
                 
             </div>
         </form>
     </section>
+
+    <div class="modal-container" id="modal-survey-form" onclick="closeModal('modal-survey-form')">
+        <div class="modal">
+            <i class="icon icon-logo"></i>
+            <h2 class="title-secondary">Agradecemos o<br> Papo Reto</h2>
+            <hr>
+            <p>Ut consequat tempor Lorem ut et culpa ex pariatur dolore. Proident cupidatat sit cupidatat tempor irure sunt. Laboris anim est culpa aute sint duis est. Enim voluptate magna sit magna ea et.</p>
+            <button class="btn btn-primary" onclick="closeModal('modal-survey-form')">OK</button>
+        </div>
+    </div>
     
+    <script>
+        const form = document.getElementById("survey-form");
+        const modalview = document.getElementById("modal-survey-form");
+        form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
 </html>

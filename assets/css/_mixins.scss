@@ -57,3 +57,24 @@
         color: $black_secondary;
     }
 }
+
+@mixin check-pattern() {
+    display: inline-block;
+    width: 30px;
+    height: 18px;
+    
+    background-repeat: no-repeat;
+    appearance: none;
+    color-adjust: exact;
+    border-radius: 40px;
+    background-position: left;
+    background-color: $grey_primary;
+
+    &:checked {
+        background-color: $purple_primary;
+        border-color: $purple_primary;
+        background-position-x: right;
+        transition: ease-in-out;
+        transition-duration: 200ms;
+    }
+}
